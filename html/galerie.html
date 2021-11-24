@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie - Červené víno</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+    <nav class="navMenu up">
+        <a href="../index.html">Domů</a>
+        <a href="./uvod.html">Úvod</a>
+        <a class="active" href="#">Galerie</a>
+        <a href="./spotrebavina.html">Graf</a>
+        <div class="dot"></div>
+    </nav>
+    <div class="absolute">
+        <div class="flex">
+            <a class="grid-1" data-fslightbox="lightbox" href="https://images.pexels.com/photos/774455/pexels-photo-774455.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"><img src="https://images.pexels.com/photos/774455/pexels-photo-774455.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"alt="grid-1"></a>
+            <a class="grid-2" data-fslightbox="lightbox" href="https://images.pexels.com/photos/248413/pexels-photo-248413.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"><img src="https://images.pexels.com/photos/248413/pexels-photo-248413.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="grid-2"></a>
+            <a class="grid-3" data-fslightbox="lightbox" href="https://images.pexels.com/photos/1479706/pexels-photo-1479706.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"><img src="https://images.pexels.com/photos/1479706/pexels-photo-1479706.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"alt="grid-3"></a>
+            <a class="grid-4" data-fslightbox="lightbox" href="https://images.pexels.com/photos/2912108/pexels-photo-2912108.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"><img src="https://images.pexels.com/photos/2912108/pexels-photo-2912108.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="grid-4"></a>
+            <a class="grid-5" data-fslightbox="lightbox" href="https://images.pexels.com/photos/3099654/pexels-photo-3099654.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"><img src="https://images.pexels.com/photos/3099654/pexels-photo-3099654.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"alt="grid-5"></a>
+            <a class="grid-6" data-fslightbox="lightbox" href="https://images.pexels.com/photos/1407846/pexels-photo-1407846.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"><img src="https://images.pexels.com/photos/1407846/pexels-photo-1407846.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="grid-6"></a>
+            <a class="grid-7" data-fslightbox="lightbox" href="https://images.pexels.com/photos/3487715/pexels-photo-3487715.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"><img src="https://images.pexels.com/photos/3487715/pexels-photo-3487715.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"alt="grid-7"></a>
+            <a class="grid-8" data-fslightbox="lightbox" href="https://images.pexels.com/photos/5359802/pexels-photo-5359802.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"><img src="https://images.pexels.com/photos/5359802/pexels-photo-5359802.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="grid-8"></a>
+        </div>
+    </div>
+    <script src="../fslightbox.js"></script>
+    <script>
+    fsLightboxInstances['first-lightbox'].open(0);
+    fsLightboxInstances['second-lightbox'].props.onOpen = () => console.log('Lightbox open!');
+    fsLightbox.close();
+    const a = document.createElement('a');
+    a.setAttribute('data-fslightbox', 'gallery');
+    a.setAttribute('href', 'images/2.jpg');
+    document.body.appendChild(a);
+
+    refreshFsLightbox();
+    const lightbox = new FsLightbox();
+
+    // set up props, like sources, types, events etc.
+    lightbox.props.sources = ['example-image.jpg', 'example-video.mp4'];
+    lightbox.props.onInit = () => console.log('Lightbox initialized!');
+
+    lightbox.open();
+    </script>
+
+</body>
+</html>

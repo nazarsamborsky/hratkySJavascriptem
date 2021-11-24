@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Úvod - Červené víno</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.1.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script type="text/javascript" src="https://api.mapy.cz/loader.js"></script>
+    <script type="text/javascript">Loader.load()</script>
+
+</head>
+<body class>
+    <nav class="navMenu up">
+        <a href="../index.html">Domů</a>
+        <a class="active" href="#">Úvod</a>
+        <a href="./galerie.html">Galerie</a>
+        <a href="./spotrebavina.html">Graf</a>
+        <div class="dot"></div>
+    </nav>
+    <div id="bubbles">
+        <div class="bubble x1"></div>
+        <div class="bubble x2"></div>
+        <div class="bubble x3"></div>
+        <div class="bubble x4"></div>
+        <div class="bubble x5"></div>
+        <div class="bubble x6"></div>
+        <div class="bubble x7"></div>
+        <div class="bubble x8"></div>
+        <div class="bubble x9"></div>
+        <div class="bubble x10"></div>
+    </div>
+    <div class="container">
+        <p>
+        Víno je nápoj získaný úplným nebo částečným alkoholovým kvašením čerstvých rozdrcených nebo nerozdrcených vinných hroznů nebo hroznového moštu.
+        Obsah alkoholu ve víně musí být vyšší než 8,5 objemových procent. S přihlédnutím ke klimatu,
+        půdě, odrůdě a zvláštním kvalitativním vlastnostem a tradicím vztahujícím se k určitým vinicím může příslušná místní legislativa připustit snížení této hranice
+        až na 4,5 objemových procent. V Evropské unii se víno smí vyrábět pouze z hroznů révy vinné.
+        </p>
+        <div class="swiffy-slider">
+            <ul class="slider-container">
+                <li><img src="../images/slider-1.jpg" style="max-width: 100%;height: auto;"></li>
+                <li><img src="../images/slider-2.jpg" style="max-width: 100%;height: auto;"></li>
+                <li><img src="../images/slider-3.jpg" style="max-width: 100%;height: auto;"></li>
+            </ul>
+        
+            <button type="button" class="slider-nav"></button>
+            <button type="button" class="slider-nav slider-nav-next"></button>
+        
+            <div class="slider-indicators">
+                <button class="active"></button>
+                <button></button>
+                <button></button>
+            </div>
+        </div>
+    </div>
+    <h2 class="poloha">
+        Kde nás najdete:
+    </h2>
+    <div class="container-2">
+        <div id="mapa" style="width:1000px; height:500px;"></div>
+    </div>
+	<script type="text/javascript">
+		var stred = SMap.Coords.fromWGS84(0.46, 47.86);
+		var mapa = new SMap(JAK.gel("mapa"), stred, 10);
+		mapa.addDefaultLayer(SMap.DEF_BASE).enable();
+		mapa.addDefaultControls();	      	      
+	</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.1.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+</body>
+</html>

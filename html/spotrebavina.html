@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Červené víno - spotřeba</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/graf.css">
+</head>
+<body>
+    <nav class="navMenu up">
+        <a href="../index.html">Domů</a>
+        <a href="./uvod.html">Úvod</a>
+        <a href="./galerie.html">Galerie</a>
+        <a class="active" href="#">Graf</a>
+        <div class="dot"></div>
+    </nav>
+    <div id="bubbles">
+        <div class="bubble x1"></div>
+        <div class="bubble x2"></div>
+        <div class="bubble x3"></div>
+        <div class="bubble x4"></div>
+        <div class="bubble x5"></div>
+        <div class="bubble x6"></div>
+        <div class="bubble x7"></div>
+        <div class="bubble x8"></div>
+        <div class="bubble x9"></div>
+        <div class="bubble x10"></div>
+    </div>
+
+    <h1 class="spotreba">
+        Spotřeba vína v milionech hektolitrů ročně
+    </h1>
+    <div class="graf-container">
+        <div class="ct-chart ct-perfect-fourth"></div>
+    </div>
+
+
+    <script src="../graf.js"></script>
+    <script>
+    var data = {
+        labels: ['2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020'],
+          series: [
+          [244, 244, 243, 244, 243, 240, 243, 244, 246, 244, 241, 241],
+        ]
+      };
+      
+      var options = {
+        seriesBarDistance: 0
+      };
+      
+      var responsiveOptions = [
+        ['screen and (min-width: 641px) and (max-width: 1024px)', {
+          seriesBarDistance: 10,
+          axisX: {
+            labelInterpolationFnc: function (value) {
+              return value;
+            }
+          }
+        }],
+        ['screen and (max-width: 640px)', {
+          seriesBarDistance: 0,
+          axisX: {
+            labelInterpolationFnc: function (value) {
+              return value[0];
+            }
+          }
+        }]
+      ];
+      
+      new Chartist.Bar('.ct-chart', data, options, responsiveOptions);
+      </script>
+</body>
+</html>
